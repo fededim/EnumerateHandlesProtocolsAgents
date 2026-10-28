@@ -23,6 +23,7 @@
     <Link>
       <AdditionalDependencies>UefiApplicationEntryPoint.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>EFI Application</SubSystem>
+	  <MergeSections>.rdata=.data;.rsrc=.data</MergeSections>
       <GenerateDebugInformation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">DebugFull</GenerateDebugInformation>
       <EntryPointSymbol Condition="'$(Configuration)|$(Platform)'=='Release|x64'">EfiMain</EntryPointSymbol>
       <LinkTimeCodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
@@ -38,5 +39,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="EnumerateHandlesProtocolsAgents.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="version.rc" />
   </ItemGroup>
 </Project>
