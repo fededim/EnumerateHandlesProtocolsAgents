@@ -3,5 +3,5 @@
     <BuildType Name="Release" />
     <Platform Name="x64" />
   </Configurations>
-  <Project Path="EnumerateHandlesProtocolsAgents.vcxproj" />
+  <Project Path="EnumerateHandlesProtocolsAgents.vcxproj" Id="79d78fd5-8f41-442f-944e-81774dc9df39" />
 </Solution>

@@ -58,6 +58,8 @@ UefiUnload(
 	// This code should be compiled out and never called 
 	// 
 	ASSERT(FALSE);
+
+	return SHELL_SUCCESS;
 }
 
 
@@ -113,7 +115,7 @@ CHAR16* GetStringNameFromHandle(EFI_HANDLE TheHandle) {
 
 EFI_STATUS
 EFIAPI
-EfiMain(
+UefiMain(
 	IN EFI_HANDLE ImageHandle,
 	IN EFI_SYSTEM_TABLE* SystemTable
 )
